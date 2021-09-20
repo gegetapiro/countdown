@@ -9,9 +9,10 @@ body {
 #end {
     display: none;
   
-    width: 600px;
+    /* width: 600px; */
     font-family: sans-serif;
-    
+    height: 40px;
+    font-size: xx-large;
     color: black;
     border-style: solid;
     border-color: #030d52;
@@ -19,8 +20,15 @@ body {
     /* padding: 20px; */
 }
 
+
 #intestazione {
-    padding: 20px;
+    font-family: sans-serif;
+    height: 40px;
+    font-size: xx-large;
+    color: black;
+    border-style: solid;
+    border-color: #030d52;
+    background-color: #ebbb63;
 }
 
 #container {
@@ -61,6 +69,10 @@ body {
 }*/
 
 #containerinput input {
+    margin: 4px;
+}
+#descripton {
+    /* position: relative; */
     margin: 4px;
 }
 
