@@ -80,7 +80,7 @@ function insertfuture() {
 	let choicedfuture = Date.parse(stringfuture);
 	//######### testo descrizione evento ###########
 	let description = document.getElementById("description").value;
-	alert(description);
+	
 	//######### fine testo descrizione evento ###########
 
 	loop = setInterval('updateTimer(' + choicedfuture + ')', 1000);
