@@ -69,7 +69,6 @@ function updateTimer(choicedfuture) {
 }
 
 function insertfuture() {
-	alert("va");
 	let day = document.getElementById("day").value;
 	let month = document.getElementById("month").value;
 	let year = document.getElementById("year").value;
@@ -80,7 +79,17 @@ function insertfuture() {
 	let choicedfuture = Date.parse(stringfuture);
 	//######### testo descrizione evento ###########
 	let description = document.getElementById("description").value;
-	
+	$.ajax({
+		type: "POST",
+		url: "descriinsert.php",
+		dataType: "text",
+		data: "description= " + description,
+		success: function (msgcont) {
+
+		}
+
+	});
+
 	//######### fine testo descrizione evento ###########
 
 	loop = setInterval('updateTimer(' + choicedfuture + ')', 1000);
