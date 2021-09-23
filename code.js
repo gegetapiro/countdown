@@ -77,20 +77,7 @@ function insertfuture() {
 	let seconds = document.getElementById("seconds").value;
 	let stringfuture = month + " " + day + ", " + year + " " + hour + ":" + minutes + ":" + seconds;
 	let choicedfuture = Date.parse(stringfuture);
-	//######### testo descrizione evento ###########
-	let description = document.getElementById("description").value;
-	$.ajax({
-		type: "POST",
-		url: "descriinsert.php",
-		dataType: "text",
-		data: "description= " + description,
-		success: function (msgcont) {
 
-		}
-
-	});
-
-	//######### fine testo descrizione evento ###########
 
 	loop = setInterval('updateTimer(' + choicedfuture + ')', 1000);
 
@@ -102,11 +89,12 @@ function insertfuture() {
 	var thevaluee = choicedfuture;
 	var placeholder = "variableName=";
 	var UrlToSend = PageToSendTo + placeholder + thevaluee;
-
-	xmlhttp.open("GET", UrlToSend, false);
+	xmlhttp.open("GET", UrlToSend, true);
 	xmlhttp.send();
 
+	
 	//######### FINE scrittura su txt by php ##################
 
 }
+
 
